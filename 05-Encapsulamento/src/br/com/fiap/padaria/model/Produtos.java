@@ -10,14 +10,14 @@ public class Produtos
 	private boolean promocao;
 		
 	
-	double calcularLucro() 
+	public double calcularLucro() 
 	{
 		double lucro =  precoVenda - precoCusto;
 		return lucro;
 	}
 
 	
-	void atualizarEstoque(int qtd) 
+	public void atualizarEstoque(int qtd)
 	{
 		quantidade += qtd;
 		
