@@ -7,7 +7,7 @@ public class Cor
 	
 	
 	
-	void alterarCor(int r, int g, int b, String nome)
+	public void alterarCor(int r, int g, int b, String nome)
 	{
 		this.r = r;
 		this.g = g;
