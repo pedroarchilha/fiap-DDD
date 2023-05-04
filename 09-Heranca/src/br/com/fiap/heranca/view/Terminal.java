@@ -1,4 +1,4 @@
-package br.com.fiap.model.heranca.view;
+package br.com.fiap.heranca.view;
 import br.com.fiap.heranca.model.Aluno;
 import br.com.fiap.heranca.model.Pessoa;
 
