@@ -6,9 +6,19 @@ public class Produto {
 
 	public Produto(int codigo) {
 		this.codigo = codigo;
-
+	}
+	
+	public Produto()
+	{
+		
 	}
 
+	public Produto(int codigo, int preco)
+	{
+		this.codigo = codigo;
+		this.preco = preco;
+	}
+	
 	public int getCodigo() {
 		return codigo;
 	}

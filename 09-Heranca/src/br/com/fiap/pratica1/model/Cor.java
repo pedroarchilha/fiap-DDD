@@ -7,11 +7,35 @@ public class Cor {
 	private int g;
 	private int b;
 
+	
+	public Cor()
+	{
+		
+	}
+	
+	public Cor(String nome, int r, int g, int b)
+	{
+		this.nome = nome;
+		this.r = r;
+		this.g = g;
+		this.b = b;
+	}
+	
 	public void alterarCor(int r, int g, int b, String nome) {
 		this.nome = nome;
 		this.r = r;
 		this.g = g;
 		this.b = b;
+	}
+
+	
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public int getR() {

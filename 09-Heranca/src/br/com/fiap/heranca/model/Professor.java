@@ -4,6 +4,15 @@ public class Professor extends Pessoa {
 
 	private double salario;
 	private int cargaHoraria;
+	
+	public Professor(int codigo, String nome, String cpf, Endereco endereco, 
+			double salario, int cargaHoraria)
+	{
+		super(codigo, nome, cpf, endereco); // igualmente ai this(), a chamada do construtor pai deve estar na 1a linha
+		this.salario = salario;
+		this.cargaHoraria = cargaHoraria;
+	}
+	
 
 	public void aplicarProva() {
 

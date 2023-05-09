@@ -6,6 +6,24 @@ public class Carro extends CommonAttributes {
 	private String placa;
 	private float motor = 1;
 
+	
+	
+	
+	public Carro()
+	{
+		
+	}
+	
+	public Carro(String modelo, int quantidadeLugares, double comprimento, 
+			int anoFabricacao, Cor cor, int quantidadePortas, String placa, float motor)
+	{
+		super(modelo, quantidadeLugares, comprimento, anoFabricacao, cor);
+		this.quantidadePortas = quantidadePortas;
+		this.placa = placa;
+		this.motor = motor;
+	}
+	
+	
 	public int getQuantidadePortas() {
 		return quantidadePortas;
 	}

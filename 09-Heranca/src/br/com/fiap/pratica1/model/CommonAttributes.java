@@ -8,6 +8,23 @@ public class CommonAttributes {
 	private int anoFabricacao;
 	private Cor cor;
 
+	
+	public CommonAttributes()
+	{
+		
+	}
+	
+	public CommonAttributes(String modelo, int quantidadeLugares, double comprimento, int anoFabricacao, Cor cor)
+	{
+		this.modelo = modelo;
+		this.quantidadeLugares = quantidadeLugares;
+		this.comprimento = comprimento;
+		this.anoFabricacao = anoFabricacao;
+		this.cor = cor;
+		
+	}
+	
+	
 	public String getModelo() {
 		return modelo;
 	}
