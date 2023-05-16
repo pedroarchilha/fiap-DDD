@@ -4,9 +4,9 @@ public class Funcionario {
 
 	private int id;
 	private String nome;
-	private double salario;
+	protected double salario;
 	private String cpf;
-	private String nivel;
+	protected String nivel;
 
 	// Aumenta o salario em 2%
 	public void aumentaSalario(float salario) {
@@ -22,21 +22,25 @@ public class Funcionario {
 	}
 
 	// Aumenta o salario: junior(2000), Pleno (5000), Senior (8000)
-	public void aumentaSalario(String nivel) {
+	public boolean aumentaSalario(String nivel) {
+		boolean aumentou = false;
 		if(nivel.equalsIgnoreCase("junior"))
 		{
-			this.salario += 2000;
+			this.salario = 2000;
+			aumentou = true;
 		}
 		else if(nivel.equalsIgnoreCase("pleno"))
 		{
-			this.salario += 5000;
+			this.salario = 5000;
+			aumentou = true;
 		}
 		else if(nivel.equalsIgnoreCase("senior"))
 		{
-			this.salario += 8000;
+			this.salario = 8000;
+			aumentou = true;
 		}
-
-	}
+		return aumentou;
+	}	
 
 	public Funcionario() {
 		super();

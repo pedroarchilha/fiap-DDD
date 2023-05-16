@@ -5,7 +5,28 @@ public class Gerente extends Funcionario {
 	private double bonus;
 	private String beneficios;
 
-	public Gerente(int id, String nome, double salario, String cpf, String nivel, double bonus, String beneficios) {
+	// Sobrescrever o metodo aumentarsalario por nivel
+	// Junior 10000; Pleno 14000, senior 30000
+
+	public boolean aumentaSalario(String nivel) {
+		boolean aumentou = false;
+		if (nivel.equalsIgnoreCase("junior") && salario < 10000) {
+			salario = 10000;
+			aumentou = true;
+		}
+		if (nivel.equalsIgnoreCase("pleno") && salario < 14000) {
+			salario = 14000;
+			aumentou = true;
+		}
+		if (nivel.equalsIgnoreCase("senior") && salario < 30000) {
+			salario = 30000;
+			aumentou = true;
+		}
+		return aumentou;
+	}
+
+	public Gerente(int id, String nome, double salario, String cpf, 
+			String nivel, double bonus, String beneficios) {
 		super(id, nome, salario, cpf, nivel);
 		this.bonus = bonus;
 		this.beneficios = beneficios;
