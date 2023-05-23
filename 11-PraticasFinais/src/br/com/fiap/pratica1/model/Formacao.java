@@ -20,7 +20,7 @@ public class Formacao {
 		this.periodo = periodo;
 		this.mensalidade = mensalidade;
 		this.duracao = duracao;
-	}
+	}1
 	
 	public Formacao(String descricao, int periodo)
 	{

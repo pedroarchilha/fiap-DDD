@@ -15,7 +15,7 @@ public class Bacharelado extends Formacao {
 		super();
 		this.projetoConclusao = projetoConclusao;
 		this.cargaHoraria = cargaHoraria;
-	}
+	}1
 
 	public Bacharelado(String descricao, int periodo, double mensalidade, int duracao, String projetoConclusao,
 			int cargaHoraria) {

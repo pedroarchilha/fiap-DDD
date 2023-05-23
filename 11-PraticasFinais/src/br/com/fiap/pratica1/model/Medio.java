@@ -20,7 +20,7 @@ public class Medio extends Formacao {
 	public Medio(String descricao, int periodo, double mensalidade, int duracao, String tipo) {
 		super(descricao, periodo, mensalidade, duracao);
 		this.tipo = tipo;
-	}
+	}1
 
 // ************************************************************************************************************//
 // 											Metodos 														   //

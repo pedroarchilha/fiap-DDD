@@ -20,7 +20,7 @@ public class Tecnologo extends Formacao {
 	public Tecnologo(String descricao, int periodo, double mensalidade, int duracao, boolean planoEstendido) {
 		super(descricao, periodo, mensalidade, duracao);
 		this.planoEstendido = planoEstendido;
-	}
+	}1
 
 	// ************************************************************************************************************//
 	// 											Metodos 														   //

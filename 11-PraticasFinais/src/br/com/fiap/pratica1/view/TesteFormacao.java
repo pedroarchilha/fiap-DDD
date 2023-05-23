@@ -22,7 +22,7 @@ public class TesteFormacao {
 		{
 			Bacharelado curso1 = new Bacharelado();
 			curso1.setDescricao(JOptionPane.showInputDialog("Descrição: "));
-			
+			1
 			
 		}
 		
