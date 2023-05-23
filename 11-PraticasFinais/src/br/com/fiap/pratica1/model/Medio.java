@@ -1,15 +1,13 @@
 package br.com.fiap.pratica1.model;
 
-public class Medio extends Formacao{
-	
+public class Medio extends Formacao {
+
 	private String tipo;
 
-	
-	
 // ************************************************************************************************************//
 //                                           Construtores													   //
 // ************************************************************************************************************//
-	
+
 	public Medio() {
 		super();
 	}
@@ -24,25 +22,33 @@ public class Medio extends Formacao{
 		this.tipo = tipo;
 	}
 
-
-	
-	
 // ************************************************************************************************************//
 // 											Metodos 														   //
 // ************************************************************************************************************//
-	
-	public double calcularMensalidade(double fator)
-	{
+
+	public double calcularMensalidade(double fator) {
 		double mensal = duracao * fator * 500;
 		return mensal;
 	}
 	
+	public void definirDuracao(int duracao)
+	{
+		duracao = 36;
+		this.duracao = duracao;
+	}
+	
+	@Override
+	public String toString() {
+		return "Medio [tipo=" + tipo + ", descricao=" + descricao + ", duracao=" + duracao + "]";
+	}
 	
 	
+
 // ************************************************************************************************************//
-// 										Getter and Setters 													   //
+// 										Getters and Setters 												   //
 // ************************************************************************************************************//
-	
+
+
 	public String getTipo() {
 		return tipo;
 	}
@@ -50,6 +56,5 @@ public class Medio extends Formacao{
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	
-	
+
 }

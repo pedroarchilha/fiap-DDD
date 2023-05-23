@@ -28,12 +28,25 @@ public class Bacharelado extends Formacao {
 // 											Metodos 														   //
 // ************************************************************************************************************//
 	public double calcularMensalidade(double fator) {
-		double mensal = (duracao * fator * 600) + (cargaHoraria * 12);
-		return mensal;
+		return (duracao * fator * 600) + (cargaHoraria * 12);
+
 	}
 
-// ************************************************************************************************************//
-// 										Getter and Setters 													   //
+	public void definirDuracao() {
+		if (descricao.toLowerCase().contains("engenharia")) {
+			duracao = 60;
+		} else {
+			duracao = 48;
+		}
+	}
+
+	public String toString() {
+		return "Bacharelado [projetoConclusao=" + projetoConclusao + ", cargaHoraria=" + cargaHoraria + ", descricao="
+				+ descricao + ", duracao=" + duracao + "]";
+	}
+
+	// ************************************************************************************************************//
+// 										Getters and Setters 													   //
 // ************************************************************************************************************//
 	public String getProjetoConclusao() {
 		return projetoConclusao;

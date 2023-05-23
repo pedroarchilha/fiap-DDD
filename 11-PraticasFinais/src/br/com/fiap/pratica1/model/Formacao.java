@@ -2,13 +2,11 @@ package br.com.fiap.pratica1.model;
 
 public class Formacao {
 
-	private String descricao;
+	protected String descricao;
 	private int periodo;
 	private double mensalidade;
-	protected int duracao;
+	protected int duracao; // Caso eu queira manter o private, posso usar o getAtributo para usa-lo
 
-	
-	
 // ************************************************************************************************************//
 //                                           Construtores													   //
 // ************************************************************************************************************//
@@ -24,6 +22,11 @@ public class Formacao {
 		this.duracao = duracao;
 	}
 	
+	public Formacao(String descricao, int periodo)
+	{
+		this.descricao = descricao;
+	}
+
 // ************************************************************************************************************//
 // 											Metodos 														   //
 // ************************************************************************************************************//
@@ -32,15 +35,15 @@ public class Formacao {
 	}
 
 	public double calcularMedia(double global1, double global2) {
-		double mediaFinal = (global1 * 0.4) + (global2 * 0.6);
-		return mediaFinal;
+		return (global1 * 0.4) + (global2 * 0.6);
+		
 	}
 
 	public double calcularMedia(double global1, double checkpoint1, double challenge1, double global2,
 			double checkpoint2, double challenge2) {
-		double mediaAnual = ((((checkpoint1 + challenge1) * 0.2) + global1 * 0.6) * 0.4)
+		return ((((checkpoint1 + challenge1) * 0.2) + global1 * 0.6) * 0.4)
 				+ ((((checkpoint2 + challenge2) * 0.2) + global2 * 0.6) * 0.6);
-		return mediaAnual;
+		
 	}
 
 	public double calcularMedia(double checkpoint1, double checkpoint2, double checkpoint3) {
@@ -57,7 +60,7 @@ public class Formacao {
 	}
 
 // ************************************************************************************************************//
-// 										Getter and Setters 													   //
+// 										Getters and Setters 													   //
 // ************************************************************************************************************//
 	public String getDescricao() {
 		return descricao;
